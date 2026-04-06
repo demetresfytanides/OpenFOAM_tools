@@ -72,50 +72,6 @@ inlet
 
 If restarting from a nonzero time, the same inlet entry must also exist in the restart directory, for example `1350/U`.
 
-## Git workflow
-
-### 1. Create a feature branch locally
-
-```bash
-git checkout -b feature/mappedFlowRateCorrected
-```
-
-### 2. Add the new source files and case changes
-
-```bash
-git add   $WM_PROJECT_USER_DIR/src/mappedFlowRateCorrected   system/controlDict   0/U
-```
-
-### 3. Commit
-
-```bash
-git commit -m "Add mappedFlowRateCorrected inlet BC for mapped inflow with alpha-weighted normal flux correction"
-```
-
-### 4. Push the new branch
-
-```bash
-git push -u origin feature/mappedFlowRateCorrected
-```
-
-## Accessing Improv
-
-Improv access is through the CELS login nodes using a jump-host workflow. Do not assume direct SSH to Improv is allowed.
-
-## Recommended directory layout on Improv
-
-After logging in, work in your project filesystem, not in your home directory.
-
-Example:
-
-```bash
-cd /path/to/your/project
-mkdir -p openfoam-dev
-cd openfoam-dev
-git clone <your-repo-url>
-cd <your-repo-name>
-git checkout feature/mappedFlowRateCorrected
-```
 
 ## Sourcing the environment
 
